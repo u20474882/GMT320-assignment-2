@@ -14,17 +14,17 @@ var minimumData = [{
 var min_layout = {
     title: 'Minimum percent change from baseline between 01/01/2022 and 15/10/2022',
     xaxis: {
-        title: 'Categories'
+        title: 'Categories of places'
     },
     yaxis: {
-        title: 'Percent change'
+        title: 'Percentage (%)'
     }
     
 };
   
 Plotly.newPlot('minimum', minimumData, min_layout);
 
-//maximum percent change from baseline
+//The maximum percent change from baseline
 var maximumData = [{
     x: ['Retail and Recreation', 'Grocery and Pharmacy', 'Parks', 'Transit Stations', 'Workplaces', 'Residential'],
     y: [108, 102, 244, 341, 110, 35],
@@ -39,16 +39,16 @@ var maximumData = [{
 var max_layout = {
     title: 'Maximum percent change from baseline between 01/01/2022 and 15/10/2022',
     xaxis: {
-        title: 'Categories'
+        title: 'Categories of places '
     },
     yaxis: {
-        title: 'Percent change'
+        title: 'Percentage (%)'
     }
 };
   
 Plotly.newPlot('maximum', maximumData, max_layout);
 
-//average percent change from baseline
+//The average percent change from baseline
 var averageData = [{
     x: ['Retail and Recreation', 'Grocery and Pharmacy', 'Parks', 'Transit Stations', 'Workplaces', 'Residential'],
     y: [25.93, 40.35, 74.41, 48.95, 22.98, 13.69],
@@ -64,11 +64,36 @@ var averageData = [{
 var average_layout = {
     title: 'Average percent change from baseline',
     xaxis: {
-        title: 'Categories'
+        title: 'Categories of places'
     },
     yaxis: {
-        title: 'Percent change'
+        title: 'Percentage (%)'
     }
 };
   
 Plotly.newPlot('average', averageData, average_layout);
+
+//The range of percent change from baseline
+var rangeData = [{
+    x: ['Retail and Recreation', 'Grocery and Pharmacy', 'Parks', 'Transit Stations', 'Workplaces', 'Residential'],
+    y: [153, 137, 268, 381, 184, 33],
+    name: 'Range percent change from baseline',
+    type: 'scatter',
+    marker: {
+        size: 14,
+        color: 'Orange'
+    }
+
+}];
+   
+var range_layout = {
+    title: 'Range percent change from baseline between 01/01/2022 and 15/10/2022',
+    xaxis: {
+        title: 'Categories of places'
+    },
+    yaxis: {
+        title: 'Percentage (%)'
+    }
+};
+  
+Plotly.newPlot('range', rangeData, range_layout);
